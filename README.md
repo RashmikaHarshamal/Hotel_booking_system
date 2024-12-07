@@ -1,2 +1,2 @@
 # Hotel_booking_system
-Hotel Booking System
+Hotel Booking System :  This project aims to develop an efficient hotel booking system to facilitate room reservations, manage customer information, and streamline hotel operations. The backend will be built using C# with Entity Framework Core to handle database interactions, while the frontend will use React, HTML, CSS, and JavaScript for a responsive and user-friendly interface. A shared database will store details about rooms, bookings, and customer records, ensuring real-time synchronization across the platform. The application will allow users to perform essential CRUD operations for managing reservations, room availability, and customer data, providing a seamless experience for both guests and hotel administrators.
