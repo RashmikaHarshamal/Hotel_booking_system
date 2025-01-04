@@ -12,4 +12,18 @@
   text-decoration: none;
 
   font-family: 'Playfair';
+} 
+
+button{
+  height: 45px;
+  width: 150px;
+  border: 1px solid #fff;
+  background-color: tranparent;
+  font-size: 15px;
+  font-weight : 500;
+  transition: 1s;
+}
+
+button:hover{
+  border-color: black;    
 }
