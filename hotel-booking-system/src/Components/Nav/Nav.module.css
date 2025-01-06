@@ -30,7 +30,7 @@
 }
 
 .nav_wrapper .logo a span{
-    color: #4f3520;
+    color: #d46b14;
 }
 
 .nav_wrapper ul li{
@@ -64,6 +64,8 @@
     box-shadow: 2px 2px 3px #ffffff94, inset 3px 3px 10px #ffffff39;
     transition: 1s;
     cursor: pointer;
+
+    display: none;
 }
 
 #bars:hover{
