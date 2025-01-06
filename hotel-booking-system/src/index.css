@@ -33,5 +33,6 @@ button{
 }
 
 button:hover{
-  border-color: black;
+  box-shadow: 0px 0px 0px #ffffff94, inset 3px 3px 10px #ffffff39;
+  transform: scale(0.95);
 }
