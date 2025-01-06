@@ -19,7 +19,7 @@ function Nav(){
 
             <div className={navCSS.Nav_btns}>
                 <button> Book Now</button>
-                <i className="ri-menu-4-line"></i>
+                <i className="ri-menu-4-line id={navCSS.bars}"></i>
             </div>
         </div>
     )

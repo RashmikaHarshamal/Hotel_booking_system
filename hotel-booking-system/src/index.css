@@ -15,16 +15,21 @@
 }
 
 button{
-  height: 45px;
-  width: 150px;
-  border: 1px solid #fff;
-  background-color: transparent;
+  height: 38px;
+  width: 130px;
+  border: none;
+  background-color: #cb5c00;
+  font-family: 'poppins';
+  letter-spacing: 1.2px;
   font-size: 15px;
   font-weight: 500;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 2px 2px 3px #ffffff94, inset 3px 3px 10px #ffffff39;
   transition: 1s;
   cursor: pointer;
 
-  position: relative;
+  /* position: relative; */
 }
 
 button:hover{
