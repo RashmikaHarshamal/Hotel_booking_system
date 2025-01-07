@@ -2,18 +2,13 @@ import React from "react";
 import navCSS from './../Nav/Nav.module.css'
 
 function Nav(){
-
-    const menu = useRef();
-
-    
-
     return(
         <div className={navCSS.nav_wrapper}>
             <div className={navCSS.logo}>
                 <a href="#"><span>ROYAL</span>X</a>
             </div>
 
-            <ul ref={menu}>
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Category</a></li>
