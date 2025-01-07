@@ -74,7 +74,26 @@
 }
 
 @media screen and (max-width: 1200px){
-#bars{
-    display: flex;
-}
+    #bars{
+        display: flex;
+    }
+
+    .nav_wrapper ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    .nav_wrapper ul li{
+        display: block;
+        margin: 5px 0;
+        padding: 25px 0;
+        padding-left: 15%;
+        border-bottom: 1px solid rgba(131, 131, 131, 0.5);
+    }
 }
