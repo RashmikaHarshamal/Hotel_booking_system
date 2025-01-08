@@ -50,11 +50,10 @@
     background-color: #fff;
     width: 5px;
     border-radius: 50%;
-    background-color: #df8033;
     transition: .2s;
 }
 
-.nav_wrapper ul li::after{
+.nav_wrapper ul li:hover:after{
     background-color: #df8033;
 }
 
@@ -108,6 +107,11 @@
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid #fff;
         transition: .6s;
+    }
+
+    .nav_wrapper ul li::after{
+        left: 10%;
+        top: 35px;
     }
 
     .nav_wrapper .showNav{
