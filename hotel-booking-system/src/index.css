@@ -36,3 +36,19 @@ button:hover{
   box-shadow: 0px 0px 0px #ffffff94, inset 3px 3px 10px #ffffff39;
   transform: scale(0.95);
 }
+
+.section{
+  padding: 90px 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section_Title{
+   font-size: 30px;
+   color: #1e1e1e;
+}
+
+.section_Title span{
+  color: #9d7e54;
+}
