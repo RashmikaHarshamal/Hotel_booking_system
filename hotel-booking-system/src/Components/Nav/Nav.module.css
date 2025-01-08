@@ -35,7 +35,27 @@
 
 .nav_wrapper ul li{
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 20px;
+
+    position: relative;
+}
+
+.nav_wrapper ul li::after{
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: -10px;
+    transform: translatex(-50%);
+    height: 5px;
+    background-color: #fff;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #df8033;
+    transition: .2s;
+}
+
+.nav_wrapper ul li::after{
+    background-color: #df8033;
 }
 
 .Nav_btns{
@@ -85,7 +105,9 @@
         width: 100%;
         background-color: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(8px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid #fff;
+        transition: .6s;
     }
 
     .nav_wrapper .showNav{
