@@ -23,6 +23,10 @@
     z-index: -1;
 }
 
+.navbarScroll{
+    background-color: #1e1e1e;;
+}
+
 .nav_wrapper .logo a{
     font-size: 25px;
     font-weight: 700;
@@ -35,26 +39,7 @@
 
 .nav_wrapper ul li{
     display: inline-block;
-    margin: 0 20px;
-
-    position: relative;
-}
-
-.nav_wrapper ul li::after{
-    position: absolute;
-    content: '';
-    top: 10px;
-    left: -10px;
-    transform: translatex(-50%);
-    height: 5px;
-    background-color: #fff;
-    width: 5px;
-    border-radius: 50%;
-    transition: .2s;
-}
-
-.nav_wrapper ul li:hover:after{
-    background-color: #df8033;
+    margin: 0 15px;
 }
 
 .Nav_btns{
@@ -100,18 +85,12 @@
     .nav_wrapper ul{
         position: absolute;
         top: 100%;
-        left: -100;
+        left: -100%;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 1);
         backdrop-filter: blur(8px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid #fff;
-        transition: .6s;
-    }
-
-    .nav_wrapper ul li::after{
-        left: 10%;
-        top: 35px;
     }
 
     .nav_wrapper .showNav{
@@ -123,9 +102,8 @@
         margin: 5px 0;
         padding: 25px 0;
         padding-left: 15%;
-        border-bottom: 1px solid rgba(131, 131, 131, 0.4);
+        border-bottom: 1px solid rgba(131, 131, 131, 0.5);
     }
-
     .nav_wrapper ul li:last-child{
         border: none;
     }

@@ -45,10 +45,17 @@ button:hover{
 }
 
 .section_Title{
-   font-size: 30px;
+   font-size: 38px;
    color: #1e1e1e;
 }
 
 .section_Title span{
   color: #9d7e54;
+}
+
+.section_Heading{ 
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e1e1e;
+  font-family: 'poppins';
 }

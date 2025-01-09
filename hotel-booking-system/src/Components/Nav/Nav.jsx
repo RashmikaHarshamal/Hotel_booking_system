@@ -4,13 +4,23 @@ import navCSS from './../Nav/Nav.module.css'
 function Nav(){
 
     const menu = useRef();
+    const navbar = useRef();
 
     const menuHandler = () =>{
         menu.current.classList.toggle(navCSS.shownNav);
     }
 
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 100){
+            navbar.current.classList.add(navCSS.navbarScroll);
+        }
+        else{
+            navbar.current.classList.remove(navCSS.navbarScroll);
+        }
+    })
+
     return(
-        <div className={navCSS.nav_wrapper}>
+        <div className={navCSS.nav_wrapper} ref={navbar}>
             <div className={navCSS.logo}>
                 <a href="#"><span>ROYAL</span>X</a>
             </div>

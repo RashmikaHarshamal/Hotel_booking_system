@@ -1,7 +1,10 @@
 import './App.css'
+import About from './Components/About/About'
 import Header from './Components/Header/Header'
 import Nav from './Components/Nav/Nav'
-import About from './Components/About/About'
+import Services from './Components/Services/Services'
+import Rooms from './Components/Rooms/Rooms'
+
 
 function App() {
 
@@ -10,6 +13,8 @@ function App() {
       <Nav/>
       <Header/>
       <About/>
+      <Services/>
+      <Rooms/>
     </>
   )
 }
