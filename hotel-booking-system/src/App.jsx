@@ -4,6 +4,7 @@ import Header from './Components/Header/Header'
 import Nav from './Components/Nav/Nav'
 import Services from './Components/Services/Services'
 import Rooms from './Components/Rooms/Rooms'
+import Amenities from './Components/Amenities/Amenities'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <About/>
       <Services/>
       <Rooms/>
+      <Amenities/>
     </>
   )
 }
