@@ -1,0 +1,15 @@
+.Services_cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.Services_cards .Services_card{
+    padding: 40px 25px;
+    border: 1px solid #452205;
+}
+
+.Services_cards .Services_card i{
+    font-size: 32px;
+    color: #df8033;
+}
