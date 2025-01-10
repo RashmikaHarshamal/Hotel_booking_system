@@ -5,6 +5,7 @@ import Nav from './Components/Nav/Nav'
 import Services from './Components/Services/Services'
 import Rooms from './Components/Rooms/Rooms'
 import Amenities from './Components/Amenities/Amenities'
+import Testimonial from './Components/Testimonial/Testimonial'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Services/>
       <Rooms/>
       <Amenities/>
+      <Testimonial/>
     </>
   )
 }
