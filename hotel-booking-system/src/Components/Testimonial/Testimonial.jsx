@@ -1,9 +1,13 @@
 import React from "react";
-import testimonialCSS from './../Testimonial/Testimonial.module.css'
+import testimonialCSS from './../Testimonial/Testimonial.module.css';
 
-import {Swiper, SwiperSlide} from "swiper/react";
-import 'swiper/css'
-import {Autoplay} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import { Autoplay } from "swiper/modules";
+
+import img1 from './../../assets/testi-01.jpg';
+import img2 from './../../assets/testi-03.jpg';
+import img3 from './../../assets/testi-04.jpg';
 
 function Testimonial(){
     return(
@@ -20,7 +24,16 @@ function Testimonial(){
                     autoplay={{
                         delay: 1000,
                     }}
-                    speed={2000}
+
+                    breakpoints = {{
+                        0:{
+                            slidesPerView:1
+                        },
+                        1200:{
+                            slidePerView:2
+                        }
+                    }}
+                    speed={1500}
                     modules={[Autoplay]}
                  >
 
@@ -28,8 +41,30 @@ function Testimonial(){
                         <div className={testimonialCSS.testimonial}>
                             <img src={img1} alt=""/>
                             <div className={testimonialCSS.content}>
+                                <h3>Amrita <span>manager</span></h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className={testimonialCSS.testimonial}>
+                            <img src={img2} alt=""/>
+                            <div className={testimonialCSS.content}>
+                                <h3>Samantha <span>Sales manager</span></h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className={testimonialCSS.testimonial}>
+                            <img src={img3} alt=""/>
+                            <div className={testimonialCSS.content}>
                                 <h3>John Doe <span>manager</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
 
                             </div>
                         </div>
