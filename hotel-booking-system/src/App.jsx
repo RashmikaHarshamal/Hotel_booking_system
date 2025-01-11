@@ -7,12 +7,14 @@ import Rooms from './Components/Rooms/Rooms'
 import Amenities from './Components/Amenities/Amenities'
 import Testimonial from './Components/Testimonial/Testimonial'
 import Footer from './Components/Footer/Footer'
+import Login from './Components/Log/Log'
 
 
 function App() {
 
   return (
     <> 
+      <Login/>
       <Nav/>
       <Header/>
       <About/>

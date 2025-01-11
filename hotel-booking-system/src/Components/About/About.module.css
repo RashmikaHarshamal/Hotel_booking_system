@@ -1,5 +1,6 @@
 .about_wrapper{
     flex-direction: row;
+    background-color: antiquewhite;
 }
 
 .about_img{
