@@ -6,6 +6,7 @@ import Services from './Components/Services/Services'
 import Rooms from './Components/Rooms/Rooms'
 import Amenities from './Components/Amenities/Amenities'
 import Testimonial from './Components/Testimonial/Testimonial'
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Rooms/>
       <Amenities/>
       <Testimonial/>
+      <Footer/>
     </>
   )
 }

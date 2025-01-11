@@ -3,7 +3,7 @@ import footerCSS from './../Footer/Footer.module.css'
 
 function Footer(){
     return(
-        <footer className={`${footerCSS.footer_wrapper} section`}>
+        <footer className={`${footerCSS.footer_wrapper} setion`}>
             <div className={footerCSS.FooterLinks}>
                 <div className={footerCSS.logo}>
                     <h2>RoyalX</h2>
@@ -33,12 +33,9 @@ function Footer(){
             <div className={footerCSS.FooterLinks}>
                 <h3>Contact</h3>
                 <p>Address: <span>360 Street- Mumbai, India</span></p>
-                <p>Email : ex@gmail.com</p>
-                <p>Phone : 0714191696</p>
+                <p>Email : <span>ex@gmail.com</span></p>
+                <p>Phone : <span>0714191696</span></p>
             </div>
-
-            <div className={footerCSS.FooterLinks}></div>
-            <div className={footerCSS.FooterLinks}></div>
         </footer>
     )
 }

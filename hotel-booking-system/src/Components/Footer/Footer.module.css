@@ -4,17 +4,46 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    padding: 50px;
 }
 
-.footerLinks{
+.FooterLinks{
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.footerLinks p{
+.FooterLinks p{
     font-family: 'poppins';
     font-size: 12px;
-    color: rgba(131. 131, 131, 1);
+    color: rgba(131, 131, 131, 1);
     margin-top: 5px;
+    cursor: pointer;
+}
+
+.FooterLinks p:hover{
+    color: #ffff;
+}
+
+.FooterLinks p span{
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.FooterLinks h2{
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width:900px){
+    .footer_wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:768px){
+    .footer_wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
