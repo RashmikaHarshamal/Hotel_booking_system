@@ -8,6 +8,8 @@ import Amenities from './Components/Amenities/Amenities'
 import Testimonial from './Components/Testimonial/Testimonial'
 import Footer from './Components/Footer/Footer'
 import Login from './Components/Log/Log'
+import AdLogin from './Components/AdLog/AdLog'
+import Booking from './Components/Booking/Booking'
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
   return (
     <> 
       <Login/>
+      <AdLogin/>
+      <Booking/>
       <Nav/>
       <Header/>
       <About/>

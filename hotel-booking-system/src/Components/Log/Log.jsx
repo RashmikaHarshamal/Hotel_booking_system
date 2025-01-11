@@ -7,7 +7,7 @@ export default function Login() {
       <img src="/image3.jpg" alt="Background" className={styles.image} />
       <div className={styles.wrapper}>
         <form action="">
-          <h1>Login</h1>
+          <h1>Log<span>IN</span></h1>
           <div className={styles.inputBox}>
             <input type="text" placeholder="Username" required />
           </div>
@@ -34,9 +34,6 @@ export default function Login() {
           <div className={styles.adminDoctor}>
             <p>
               Admin Login? <a href="#">Click here</a>
-            </p>
-            <p>
-              Doctor Login? <a href="#">Click here</a>
             </p>
           </div>
         </form>

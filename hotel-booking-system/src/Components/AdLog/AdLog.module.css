@@ -28,22 +28,13 @@
   
   .wrapper {
     width: 420px;
-    background: #2a1402;
+    background: rgba(21, 10, 1, 0.8); /* Adjust transparency with the alpha value (0.8) */
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
-}
-
-.wrapper {
-  width: 420px;
-  background: rgba(21, 10, 1, 0.8); /* Adjust transparency with the alpha value (0.8) */
-  color: #fff;
-  border-radius: 10px;
-  padding: 30px 40px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
-}
-
+  }
+  
   /* Heading */
   .wrapper h1 {
     font-size: 36px;
@@ -139,4 +130,3 @@
   .adminDoctor p a:hover {
     text-decoration: underline;
   }
-  

@@ -1,0 +1,121 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+  }
+  
+  .booking-container {
+    max-width: 50%; /* Reduce container width to 50% */
+    margin: 20%;
+    padding: 50px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+  }
+  
+  h2 {
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    margin-bottom: 20px;
+  }
+  
+  /* .tabs button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .tabs button:hover {
+    background: #0056b3;
+  }
+   */
+  .booking-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .form-left,
+  .form-right {
+    width: 48%; /* Ensure both sides take equal space */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+    text-align: left;
+  }
+  
+  input,
+  select {
+    width: 100%; /* Input fields take full width of their container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .inline-inputs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensure inputs wrap on smaller screens */
+  }
+  
+  .checkboxes {
+    display: flex; /* Align checkboxes inline */
+    gap: 15px; /* Add space between checkboxes */
+  }
+  
+  .checkboxes label {
+    display: flex;
+    align-items: center; /* Align text with checkboxes */
+    gap: 5px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #calculate-btn {
+    width: 100%;
+    background: #28a745;
+  }
+  
+  #calculate-btn:hover {
+    background: #218838;
+  }
+  
+  #food-menu-btn,
+#calculate-btn {
+  width: 100%; /* Increase button width */
+  padding: 15px; /* Optional: Add more padding */
+  font-size: 16px; /* Optional: Adjust font size */
+}
+
+#food-menu-btn:hover,
+#calculate-btn:hover {
+  background-color: #218838; /* Add a hover effect */
+}
