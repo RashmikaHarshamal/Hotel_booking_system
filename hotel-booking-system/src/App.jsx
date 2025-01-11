@@ -10,6 +10,8 @@ import Footer from './Components/Footer/Footer'
 import Login from './Components/Log/Log'
 import AdLogin from './Components/AdLog/AdLog'
 import Booking from './Components/Booking/Booking'
+import ForgetPassword from './Components/ForgetPassword/ForgetPassword'
+import CreateAcc from './Components/CreateAcc/CreateAcc'
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
     <> 
       <Login/>
       <AdLogin/>
+      <ForgetPassword/>
+      <CreateAcc/>
       <Booking/>
       <Nav/>
       <Header/>

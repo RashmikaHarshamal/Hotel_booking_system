@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './AdLog.module.css';
+import styles from './CreateAcc.module.css';
 
 export default function Login() {
   return (
@@ -8,14 +8,34 @@ export default function Login() {
       <div className={styles.wrapper}>
         <form action="">
           <h1>
-            AD<span>MIN </span> Log<span>IN</span>
+            CREATE <span>ACCOUNT</span>
           </h1>
           <div className={styles.inputBox}>
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Full Name" required />
           </div>
 
           <div className={styles.inputBox}>
-            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Last Name" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="password" placeholder="Birth Day" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="text" placeholder="Gender" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="Number" placeholder="Phone Number" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="text" placeholder="Email" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="text" placeholder="Adress" required />
           </div>
 
           <div className={styles.rememberForgot}>
@@ -40,7 +60,7 @@ export default function Login() {
 
           <div className={styles.adminDoctor}>
             <p>
-              User Login? <a href="#">Click here</a>
+              Admin Login? <a href="#">Click here</a>
             </p>
           </div>
         </form>

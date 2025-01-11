@@ -1,6 +1,6 @@
 .nav_wrapper{
     height: 80px;
-    width: 80%;
+    width: 100%;
     background-color: rgb(243, 221, 221);
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,7 @@
     position: fixed;
     top: 0;
     z-index: 99;
-    gap : 10px;
+    gap : 280px;
 }
 
 .nav_wrapper::after{

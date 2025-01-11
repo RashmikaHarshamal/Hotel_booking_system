@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './AdLog.module.css';
+import styles from './ForgetPassword.module.css';
 
 export default function Login() {
   return (
@@ -8,41 +8,33 @@ export default function Login() {
       <div className={styles.wrapper}>
         <form action="">
           <h1>
-            AD<span>MIN </span> Log<span>IN</span>
+            FORGET  <span>PASSWORD</span>
           </h1>
           <div className={styles.inputBox}>
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Email" required />
           </div>
 
           <div className={styles.inputBox}>
             <input type="password" placeholder="Password" required />
           </div>
+          
+          <div className={styles.inputBox}>
+            <input type="Birth Day" placeholder="Birth Day" required />
+          </div>
 
           <div className={styles.rememberForgot}>
                       <label htmlFor="remember">
-                        <input id="remember" type="checkbox" />
-                        Remember me
+                              
                       </label>
                       <a href="#" aria-label="Forgot password?">
-                        Forgot password?
+                          <t>  </t>
                       </a>
             </div>
 
           <button type="submit" className={styles.btn}>
-            Login
+            Reset Password
           </button>
 
-          <div className={styles.registerLink}>
-            <p>
-              Don't have an account? <a href="#">Create Account</a>
-            </p>
-          </div>
-
-          <div className={styles.adminDoctor}>
-            <p>
-              User Login? <a href="#">Click here</a>
-            </p>
-          </div>
         </form>
       </div>
     </div>
