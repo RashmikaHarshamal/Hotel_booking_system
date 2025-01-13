@@ -1,121 +1,198 @@
+/* body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #c95151; /* Default background for the body */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f7f7f7;
-  }
-  
-  .booking-container {
-    max-width: 50%; /* Reduce container width to 50% */
-    margin: 20%;
-    padding: 50px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
-  }
-  
-  h2 {
-    text-align: left; /* Align heading to the left */
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .tabs {
-    display: flex;
-    justify-content: flex-start; /* Align buttons to the left */
-    margin-bottom: 20px;
-  }
-  
-  /* .tabs button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .tabs button:hover {
-    background: #0056b3;
-  }
-   */
-  .booking-form {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .form-left,
-  .form-right {
-    width: 48%; /* Ensure both sides take equal space */
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-    color: #555;
-    text-align: left;
-  }
-  
-  input,
-  select {
-    width: 100%; /* Input fields take full width of their container */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .inline-inputs {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap; /* Ensure inputs wrap on smaller screens */
-  }
-  
-  .checkboxes {
-    display: flex; /* Align checkboxes inline */
-    gap: 15px; /* Add space between checkboxes */
-  }
-  
-  .checkboxes label {
-    display: flex;
-    align-items: center; /* Align text with checkboxes */
-    gap: 5px;
-  }
-  
-  .actions {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  #calculate-btn {
-    width: 100%;
-    background: #28a745;
-  }
-  
-  #calculate-btn:hover {
-    background: #218838;
-  }
-  
-  #food-menu-btn,
+
+/* Wrapper for the whole booking page */
+/* 
+.bookingForm
+{
+    position: fixed;
+} */
+
+.about_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* background-color: rgb(157, 153, 144); */
+  background-image: url('image1.jpg');
+  background-size: cover; /* Make sure the background covers the container */
+  background-position: center; /* Center the image */
+  position: relative;
+  z-index: 1;
+}
+
+/* Booking Page Specific Styles */
+.bookingContainer {
+  background: no; /* Green background only for the booking page */
+  color: #fff; /* White text for better contrast */
+  max-width: 100%;
+  margin: 5% auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+  /*background-image: url('image1.jpg');*/ /* Set background image */
+  background-size: cover; /* Make sure the background covers the container */
+  background-position: center; /* Center the image */
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay Effect for Background Image */
+.bookingContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay to enhance text visibility */
+  z-index: -1;
+}
+
+/* Form Styling */
+.bookingForm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2; /* Ensure the form content is above the overlay */
+}
+
+/* Form Sections */
+.formLeft,
+.formRight {
+  width: 48%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85); /* Slightly transparent background for form */
+  border-radius: 10px;
+}
+
+/* Form Group */
+.formGroup {
+  margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Input Fields */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff9900;
+  outline: none;
+}
+
+/* Inline Inputs */
+.inlineInputs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Button Styling */
+button {
+  background-color: #ff9900;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #e68a00;
+}
+
+/* Food Menu and Calculate Button - Centering */
+.actions {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  align-items: center; /* Aligns the buttons vertically */
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Checkboxes Styling */
+.checkboxes {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* Button Hover Effects */
+#food-menu-btn,
 #calculate-btn {
-  width: 100%; /* Increase button width */
-  padding: 15px; /* Optional: Add more padding */
-  font-size: 16px; /* Optional: Adjust font size */
+  width: 100%;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #food-menu-btn:hover,
 #calculate-btn:hover {
-  background-color: #218838; /* Add a hover effect */
+  background-color: #e68a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bookingContainer {
+    max-width: 90%;
+    padding: 30px;
+  }
+
+  .bookingForm {
+    flex-direction: column;
+  }
+
+  .formLeft,
+  .formRight {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .inlineInputs {
+    flex-direction: column;
+  }
+}
+
+/* Center only the "Login" heading */
+.about_wrapper .bookingContainer h1 .login-heading {
+  text-align: center; /* Centers the text horizontally */
+  margin: 0 auto; /* Ensures proper centering within its container */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Optional: Make it bold */
+  color: #333; /* Adjust the color */
 }

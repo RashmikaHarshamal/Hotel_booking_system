@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CreateAcc.module.css';
 
-export default function Login() {
+export default function CreateAccount() {
   return (
     <div className={styles.backgroundpart1}>
       <img src="/image3.jpg" alt="Background" className={styles.image} />
@@ -10,57 +10,52 @@ export default function Login() {
           <h1>
             CREATE <span>ACCOUNT</span>
           </h1>
-          <div className={styles.inputBox}>
-            <input type="text" placeholder="Full Name" required />
-          </div>
 
-          <div className={styles.inputBox}>
-            <input type="password" placeholder="Last Name" required />
-          </div>
-
-          <div className={styles.inputBox}>
-            <input type="password" placeholder="Birth Day" required />
-          </div>
-
-          <div className={styles.inputBox}>
-            <input type="text" placeholder="Gender" required />
-          </div>
-
-          <div className={styles.inputBox}>
-            <input type="Number" placeholder="Phone Number" required />
-          </div>
-
-          <div className={styles.inputBox}>
-            <input type="text" placeholder="Email" required />
-          </div>
-
-          <div className={styles.inputBox}>
-            <input type="text" placeholder="Adress" required />
-          </div>
-
-          <div className={styles.rememberForgot}>
-                      <label htmlFor="remember">
-                        <input id="remember" type="checkbox" />
-                        Remember me
-                      </label>
-                      <a href="#" aria-label="Forgot password?">
-                        Forgot password?
-                      </a>
+          <div className={styles.inline}>
+            <div className={styles.inputBox}>
+              <input type="text" placeholder="Full Name" required />
             </div>
 
-          <button type="submit" className={styles.btn}>
-            Login
-          </button>
-
-          <div className={styles.registerLink}>
-            <p>
-              Don't have an account? <a href="#">Create Account</a>
-            </p>
+            <div className={styles.inputBox}>
+              <input type="text" placeholder="Last Name" required />
+            </div>
           </div>
 
-          <div className={styles.adminDoctor}>
+          <div className={styles.inputBox}>
+            <input type="date" placeholder="Birth Day (mm/dd/yyyy)" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <select placeholder="Gender" required>
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="email" placeholder="Email" required />
+          </div>
+
+          <div className={styles.inputBox}>
+            <input type="text" placeholder="Address" required />
+          </div>
+
+          <button type="submit" className={styles.btn}>
+            Create Account
+          </button>
+
+          <div className={styles.Already}>
             <p>
-              Admin Login? <a href="#">Click here</a>
+              Already have an account?{' '}
+              <a href="/login" className={styles.loginLink}>
+                login here
+              </a>
             </p>
           </div>
         </form>

@@ -35,7 +35,7 @@
 }
 
 .nav_wrapper .logo a span{
-    color: #d46b14;
+    color: #ff9900;
 }
 
 .nav_wrapper ul li{
@@ -58,7 +58,7 @@
 
 #bars{
     border: none;
-    background-color: #cb5c00;
+    background-color: #ff9900;
     height: 40px;
     width: 40px;
     display: flex;

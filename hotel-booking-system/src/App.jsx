@@ -30,7 +30,7 @@ function App() {
       <Rooms/>
       <Amenities/>
       <Testimonial/>
-      <Footer/>
+      <Footer/> 
     </>
   )
 }
