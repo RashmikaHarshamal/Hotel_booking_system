@@ -26,6 +26,10 @@ export default function CreateAccount() {
           </div>
 
           <div className={styles.inputBox}>
+            <input type="Number" placeholder="ID No" required />
+          </div>
+
+          <div className={styles.inputBox}>
             <select placeholder="Gender" required>
               <option value="">Select Gender</option>
               <option value="Male">Male</option>

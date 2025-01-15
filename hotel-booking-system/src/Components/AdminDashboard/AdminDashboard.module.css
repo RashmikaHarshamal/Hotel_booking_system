@@ -1,0 +1,125 @@
+/* AdminDashboard.module.css */
+.adminDashboardContainer {
+    padding: 40px;
+    background-color: #1e1e2f;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+  }
+  
+  /* h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ff9900;
+    font-weight: 700;
+  }
+   */
+  .adminAppointmentsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #2a2a3c;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .adminAppointmentsTable th,
+  .adminAppointmentsTable td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .adminAppointmentsTable th {
+    background-color: #ff9900;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .adminAppointmentsTable tr:nth-child(even) {
+    background-color: #333344;
+  }
+  
+  .adminAppointmentsTable tr:hover {
+    background-color: #444555;
+    transform: scale(1.02);
+    transition: 0.3s ease;
+  }
+  
+  .adminCompleteBtn,
+  .adminCancelBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .adminCompleteBtn {
+    background-color: #28a745;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .adminCompleteBtn:hover {
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .adminCancelBtn {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .adminCancelBtn:hover {
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .statusBadge {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+  }
+  
+  .statusPending {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .statusCompleted {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .statusCanceled {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .adminDashboardContainer {
+      padding: 20px;
+    }
+  
+    .adminAppointmentsTable th,
+    .adminAppointmentsTable td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .adminCompleteBtn,
+    .adminCancelBtn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

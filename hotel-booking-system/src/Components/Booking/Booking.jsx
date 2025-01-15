@@ -30,6 +30,10 @@ export default function Booking() {
               </div>
             </div>
             <div className={styles.formGroup}>
+              <label>ID</label>
+              <input type="text" placeholder="NIC" />
+            </div>
+            <div className={styles.formGroup}>
               <label>Gender</label>
               <select>
                 <option>Select</option>
@@ -50,7 +54,10 @@ export default function Booking() {
             <div className={styles.formGroup}>
               <label>Apt./Suite</label>
               <div className={styles.inlineInputs}>
-                <input type="text" placeholder="City" /></div>
+                <input type="text" placeholder="City" />
+                <input type="text" placeholder="State" />
+                <input type="text" placeholder="Zip code" />
+              </div>
             </div>
           </div>
           <div className={styles.formRight}>
@@ -58,7 +65,7 @@ export default function Booking() {
               <label>Your choices</label>
               <div className={styles.inlineInputs}>
                 <select>
-                  <option>Choose Guest num. (optional)</option>
+                  <option>Choose Guest num.</option>
                 </select>
                 <select>
                   <option>Room type</option>
@@ -71,6 +78,7 @@ export default function Booking() {
                 <select>
                   <option>Floor</option>
                 </select>
+                <input type="text" placeholder="#" />
               </div>
             </div>
             <div className={styles.formGroup}>

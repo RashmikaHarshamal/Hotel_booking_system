@@ -12,6 +12,10 @@ import AdLogin from './Components/AdLog/AdLog'
 import Booking from './Components/Booking/Booking'
 import ForgetPassword from './Components/ForgetPassword/ForgetPassword'
 import CreateAcc from './Components/CreateAcc/CreateAcc'
+import AdminDashboard from './Components/AdminDashboard/AdminDashboard'
+import HotelBookingForm from './Components/HotelBookingForm/HotelBookingForm'
+import FoodMenu from './Components/FoodMenu/FoodMenu'
+import Menu from './Components/Menu/Menu'
 
 
 function App() {
@@ -31,6 +35,10 @@ function App() {
       <Amenities/>
       <Testimonial/>
       <Footer/> 
+      <AdminDashboard/>
+      <HotelBookingForm/>
+      <FoodMenu/>
+      <Menu/>
     </>
   )
 }
