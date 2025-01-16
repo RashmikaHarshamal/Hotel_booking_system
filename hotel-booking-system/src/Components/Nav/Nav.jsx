@@ -27,18 +27,18 @@ const Navigate = useNavigate();
                 <Link to="/"><span>ROYAL</span>X</Link>
             </div>
 
-            <ul ref={menu}>
-                <li><Link to="/header">Home</Link></li>
+            {/* <ul ref={menu}>
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/services">Services</Link></li>
                 <li><Link to="/rooms">Rooms</Link></li>
                 <li><Link to="/foodmenu">FoodMenu</Link></li>
                 <li><Link to="/amenities">Amenities</Link></li>
                 <li><Link to="/testimonial">Testimonial</Link></li>
-            </ul>
+            </ul> */}
 
             <div className={navCSS.Nav_btns}>
                 <button onClick={()=>Navigate('/log')}> LogIn</button>
-                <i className="ri-menu-4-line" id={navCSS.bars} oncClick={menuHandler}></i>
+                <i className="ri-menu-4-line" id={navCSS.bars} onClick={menuHandler}></i>
             </div>
         </div>
     )

@@ -32,7 +32,7 @@ export default function Login() {
                       </Link>
             </div>
 
-            <button onClick={()=>Navigate('/header')} type="submit" className={styles.btn}>
+            <button onClick={()=>Navigate('/headerloged')} type="submit" className={styles.btn}>
             Login
           </button>
 

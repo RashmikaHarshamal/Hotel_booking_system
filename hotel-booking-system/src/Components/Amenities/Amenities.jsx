@@ -9,10 +9,15 @@ import img2 from './../../assets/gym.jpg'
 import img3 from './../../assets/rest.jpg'
 
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from "../Footer/Footer";
+import NavLoged from "../NavLoged/NavLoged";
 
 
 function Amenities() {
     return(
+
+        <>
+        <NavLoged/>
         <div className={`${amenitiesCSS.amenities_wrapper} section`}>
             <small className="section_Heading">Luxury Amenities</small>
             <h2 className="section_Title">Our Best<span>Amenities</span></h2>
@@ -64,6 +69,9 @@ function Amenities() {
             </Swiper>
 
         </div>
+
+        <Footer/>
+        </>
     )
 }
   

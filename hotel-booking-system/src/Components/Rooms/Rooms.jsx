@@ -1,9 +1,14 @@
 import React from "react";
 import roomsCSS from './../Rooms/Rooms.module.css'
 import { Link } from 'react-router-dom'
+import Footer from "../Footer/Footer";
+import NavLoged from "../NavLoged/NavLoged";
 
 function Rooms(){
    return(
+        <>
+            <NavLoged/>
+            
            <div className={`${roomsCSS.Rooms_container} section`}>
                <small className="section_Heading">Luxury Suites</small>
                <h2 className="section_Title">Our Best<span>Rooms</span></h2>
@@ -155,6 +160,8 @@ function Rooms(){
 
                </div>
             </div>
+            <Footer/>
+        </>
        )
 }
 

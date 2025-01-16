@@ -16,6 +16,9 @@ import HotelBookingForm from './Components/HotelBookingForm/HotelBookingForm'
 import FoodMenu from './Components/FoodMenu/FoodMenu'
 import Menu from './Components/Menu/Menu'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HeaderLoged from './Components/HeaderLoged/HeaderLoged'
+import NavLoged from './Components/NavLoged/NavLoged'
+import About from './Components/About/About'
 
 function App() {
 
@@ -30,12 +33,15 @@ function App() {
           <Route path="/foodmenu" element={<FoodMenu/>}> </Route>
           <Route path="/amenities" element={<Amenities/>}> </Route>
           <Route path="/testimonial" element={<Testimonial/>}> </Route>
+          <Route path="/about" element={<About/>}> </Route>
           
           <Route path="/CreateAccount" element={<CreateAcc/>}> </Route>
           <Route path="/adlogin" element={<AdLogin/>}> </Route>
           <Route path="/log" element={<Login/>}> </Route>
           <Route path="/forgetpassword" element={<ForgetPassword/>}> </Route>
         
+          <Route path="/headerloged" element={<HeaderLoged/>}> </Route>
+
         </Routes>
       </BrowserRouter>
     </div>

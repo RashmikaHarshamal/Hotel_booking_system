@@ -1,10 +1,14 @@
 import React from "react";
 import roomsCSS from './../FoodMenu/FoodMenu.module.css'
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from "../Footer/Footer";
+import NavLoged from "../NavLoged/NavLoged";
 
 
 function FoodMenu(){
    return(
+            <>
+            <NavLoged/>
            <div className={`${roomsCSS.Rooms_container} section`}>
                <small className="section_Heading">DELISIOUS FOODS</small>
                <h2 className="section_Title">Our Best<span>Menu</span></h2>
@@ -174,6 +178,9 @@ function FoodMenu(){
 
                </div>
             </div>
+
+            <Footer/>
+            </>
        )
 }
 

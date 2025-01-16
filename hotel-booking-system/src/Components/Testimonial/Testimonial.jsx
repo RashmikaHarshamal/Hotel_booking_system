@@ -10,10 +10,15 @@ import img2 from './../../assets/testi-03.jpg';
 import img3 from './../../assets/testi-04.jpg';
 
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from "../Footer/Footer";
+import NavLoged from "../NavLoged/NavLoged";
 
 
 function Testimonial(){
     return(
+
+        <>
+        <NavLoged/>
         <div className={`${testimonialCSS.testimonial_wrapper} section`}>
 
             <small className="section_Heading">Testimonials</small>
@@ -75,7 +80,9 @@ function Testimonial(){
 
                 </Swiper>
 
-        </div>
+            </div>
+            <Footer/>
+        </>
     )
 }
 

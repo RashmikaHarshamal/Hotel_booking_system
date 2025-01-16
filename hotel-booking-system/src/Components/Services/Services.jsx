@@ -1,10 +1,15 @@
 import React from "react";
 import ServicesCSS from './../Services/Services.module.css'
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from "../Footer/Footer";
+import NavLoged from "../NavLoged/NavLoged";
 
 
 function Services(){
     return(
+
+        <>
+        <NavLoged/>
         <div className={`${ServicesCSS.Service_wrapper} section`}>
             <small className="section_Heading">Facilities</small>
             <h2 className="section_Title">Our Best<span>Services</span></h2>
@@ -47,6 +52,8 @@ function Services(){
 
             </div>
         </div>
+        <Footer/>
+    </>
     )
 }
 
