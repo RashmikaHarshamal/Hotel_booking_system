@@ -1,19 +1,23 @@
 import React from "react";
 import aboutCSS from './../About/About.module.css';
 
+import { Link, useNavigate } from 'react-router-dom';
+
 import aboutImg from './../../assets/about-one.png';
+import NavLoged from "../NavLoged/NavLoged";
+import Footer from "../Footer/Footer";
 
 function About() {
     return(
+        <>
+        <NavLoged/>
         <div className={`${aboutCSS.about_wrapper} section`}>
             <div className={aboutCSS.about_img}>
-                <img src={aboutImg} alt="" />
+                <img src={aboutImg} alt="about-img" />
             </div>
             <div className={aboutCSS.about_content}>
-                <small>The Royal Hotel</small>
+                <small className="section_Heading">The Royal Hotel</small>
                 <h2 className="section_Title">Where Elegance Meets <span>Excellence</span></h2>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
 
                 <div className={aboutCSS.Cards}>
                     <p>260+ <span>Awards Wins</span></p>
@@ -22,6 +26,8 @@ function About() {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 
