@@ -9,6 +9,9 @@ import img1 from './../../assets/testi-01.jpg';
 import img2 from './../../assets/testi-03.jpg';
 import img3 from './../../assets/testi-04.jpg';
 
+import { Link, useNavigate } from 'react-router-dom';
+
+
 function Testimonial(){
     return(
         <div className={`${testimonialCSS.testimonial_wrapper} section`}>

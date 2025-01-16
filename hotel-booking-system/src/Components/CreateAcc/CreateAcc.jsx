@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './CreateAcc.module.css';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 export default function CreateAccount() {
   return (
@@ -57,9 +59,8 @@ export default function CreateAccount() {
           <div className={styles.Already}>
             <p>
               Already have an account?{' '}
-              <a href="/login" className={styles.loginLink}>
-                login here
-              </a>
+              <Link to="/log" className={styles.loginLink}>
+                login here </Link>
             </p>
           </div>
         </form>

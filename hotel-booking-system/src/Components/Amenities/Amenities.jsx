@@ -8,6 +8,9 @@ import img1 from './../../assets/pool.jpg'
 import img2 from './../../assets/gym.jpg'
 import img3 from './../../assets/rest.jpg'
 
+import { Link, useNavigate } from 'react-router-dom';
+
+
 function Amenities() {
     return(
         <div className={`${amenitiesCSS.amenities_wrapper} section`}>

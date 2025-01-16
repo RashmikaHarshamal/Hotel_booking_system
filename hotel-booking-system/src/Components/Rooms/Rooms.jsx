@@ -1,5 +1,6 @@
 import React from "react";
 import roomsCSS from './../Rooms/Rooms.module.css'
+import { Link } from 'react-router-dom'
 
 function Rooms(){
    return(

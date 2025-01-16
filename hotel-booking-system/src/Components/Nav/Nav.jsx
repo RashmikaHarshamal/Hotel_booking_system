@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import navCSS from './../Nav/Nav.module.css'
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function Nav(){
@@ -19,25 +20,25 @@ function Nav(){
             navbar.current.classList.remove(navCSS.navbarScroll);
         }
     })
-
+const Navigate = useNavigate();
     return(
         <div className={navCSS.nav_wrapper} ref={navbar}>
             <div className={navCSS.logo}>
-                <a href="#"><span>ROYAL</span>X</a>
+                <Link to="/"><span>ROYAL</span>X</Link>
             </div>
 
             <ul ref={menu}>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Rooms</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Blogs</a></li>
+                <li><Link to="/header">Home</Link></li>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/rooms">Rooms</Link></li>
+                <li><Link to="/foodmenu">FoodMenu</Link></li>
+                <li><Link to="/amenities">Amenities</Link></li>
+                <li><Link to="/testimonial">Testimonial</Link></li>
             </ul>
 
             <div className={navCSS.Nav_btns}>
-                <button> Book Now</button>
-                <i className="ri-menu-4-line" id={navCSS.bars} onclick={menuHandler}></i>
+                <button onClick={()=>Navigate('/log')}> LogIn</button>
+                <i className="ri-menu-4-line" id={navCSS.bars} oncClick={menuHandler}></i>
             </div>
         </div>
     )

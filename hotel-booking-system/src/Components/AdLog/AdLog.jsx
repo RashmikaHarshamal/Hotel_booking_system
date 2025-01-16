@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './AdLog.module.css';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function Login() {
+
+export default function AdLogin() {
   return (
     <div className={styles.backgroundpart1}>
       <img src="/image3.jpg" alt="Background" className={styles.image} />
@@ -28,19 +30,19 @@ export default function Login() {
                       </a>
             </div>
 
-          <button type="submit" className={styles.btn}>
+          <button onClick={()=>Navigate('/admindashboard')}type="submit" className={styles.btn}>
             Login
           </button>
 
           <div className={styles.registerLink}>
             <p>
-              Don't have an account? <a href="#">Create Account</a>
+              Don't have an account? <Link to="/CreateAccount">Create Account</Link>
             </p>
           </div>
 
           <div className={styles.adminDoctor}>
             <p>
-              User Login? <a href="#">Click here</a>
+              User Login? <Link to="/log">Click here</Link>
             </p>
           </div>
         </form>

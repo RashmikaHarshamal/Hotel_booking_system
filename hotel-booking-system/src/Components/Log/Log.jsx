@@ -1,13 +1,19 @@
 import React from 'react';
 import styles from './Log.module.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
+
+  const Navigate = useNavigate();
+
   return (
     <div className={styles.backgroundpart1}>
       <img src="/image3.jpg" alt="Background" className={styles.image} />
       <div className={styles.wrapper}>
         <form action="">
-          <h1>Log<span>IN</span></h1>
+          <h1>
+            Log<span>IN</span>
+          </h1>
           <div className={styles.inputBox}>
             <input type="text" placeholder="Username" required />
           </div>
@@ -17,23 +23,28 @@ export default function Login() {
           </div>
 
           <div className={styles.rememberForgot}>
-            <label>
-              <input type="checkbox" /> Remember me
-            </label>
-            <a href="#">Forgot password?</a>
-          </div>
+                      <label htmlFor="remember">
+                        <input id="remember" type="checkbox" />
+                        Remember me
+                      </label>
+                      <Link to="/forgetpassword" aria-label="Forgot password?">
+                        Forgot password?
+                      </Link>
+            </div>
 
-          <button type="submit" className={styles.btn}>Login</button>
+            <button onClick={()=>Navigate('/header')} type="submit" className={styles.btn}>
+            Login
+          </button>
 
           <div className={styles.registerLink}>
             <p>
-              Don't have an account? <a href="#">Create Account</a>
+              Don't have an account? <Link to="/CreateAccount">Create Account</Link>
             </p>
           </div>
 
           <div className={styles.adminDoctor}>
             <p>
-              Admin Login? <a href="#">Click here</a>
+              Admin Login? <Link to="/adlogin">Click here</Link>
             </p>
           </div>
         </form>
