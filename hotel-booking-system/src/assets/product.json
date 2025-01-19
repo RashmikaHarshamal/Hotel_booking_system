@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Framers Pick",
+        "amt": "299",
+        "shop": "pizza HUt",
+        "ftupe": "Pizza",
+        "pic" : "https://sthotelsmalta.com/wp-content/uploads/2022/06/modern-luxury-bedroom-suite-and-bathroom-with-working-table-scaled.jpg",
+        "latest": "No"
+    },
+
+    {
+        "id": 2,
+        "name": "Framers Pick",
+        "amt": "2991",
+        "shop": "pizza HUtt",
+        "ftupe": "Pizzaa",
+        "pic" :"https://fruitbasket.limepack.com/blog/wp-content/uploads/2024/04/pexels-max-vakhtbovycn-6758770.jpg",
+        "latest": "No"
+    },
+
+    {
+        "id": 3,
+        "name": "Framers Pick2",
+        "amt": "2992",
+        "shop": "pizza HUttt",
+        "ftupe": "Pizzaaa",
+        "pic" :"https://e360hospitality.com/wp-content/uploads/2024/03/Hotel-room-types-1200x1200.jpg",
+        "latest": "No"
+    },
+
+    {
+        "id": 4,
+        "name": "Framers Pick3",
+        "amt": "2993",
+        "shop": "pizza HUtttt",
+        "ftupe": "Pizzaaaa",
+        "pic" :"https://i.pinimg.com/236x/f4/75/1d/f4751d4adc83649e16c8fe9339979691.jpg",
+        "latest": "No"
+    },
+
+    {
+        "id": 5,
+        "name": "Framers Pick4",
+        "amt": "2994",
+        "shop": "pizza HUttttt",
+        "ftupe": "Pizzaaaaa",
+        "pic" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRgsuFx1WIa1woNH-VHlSKEi9O3bWPRMXhqhiNf06Lofcoku-PddC7hrDWvUw8ZPRzeZc&usqp=CAU",
+        "latest": "No"
+    },
+
+    {
+        "id": 6,
+        "name": "Framers Pick5",
+        "amt": "2995",
+        "shop": "pizza HUtttttt",
+        "ftupe": "Pizzaaaaaa",
+        "pic" :"https://i.pinimg.com/736x/88/77/d3/8877d3366110cf9b177c0a8a2f2a9ea2.jpg",
+        "latest": "No"
+    }
+
+]
