@@ -3,10 +3,11 @@ import roomsCSS from './../Rooms/Rooms.module.css'
 import { Link } from 'react-router-dom'
 import Footer from "../Footer/Footer";
 import NavLoged from "../NavLoged/NavLoged";
+import { useNavigate } from 'react-router-dom';
 
 
 function Rooms(){
-    
+    const Navigate = useNavigate();
    return(
             <>
             <NavLoged/>
@@ -33,7 +34,7 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button>Book Now</button>
+                                    <button onClick={()=>Navigate('/home2')}>Book Now</button>
                                     <i className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
