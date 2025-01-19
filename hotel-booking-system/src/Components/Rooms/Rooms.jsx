@@ -162,11 +162,11 @@ function Rooms(){
                </div>
 
             </div>
-            
+
         <Footer/>
        </>
        )
        
-};
+}
 
 export default Rooms

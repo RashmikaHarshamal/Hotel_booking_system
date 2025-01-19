@@ -18,6 +18,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HeaderLoged from './Components/HeaderLoged/HeaderLoged'
 import NavLoged from './Components/NavLoged/NavLoged'
 import About from './Components/About/About'
+import Rooms from './Components/Rooms/Rooms'
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
+      
     </div>
   )
 }
