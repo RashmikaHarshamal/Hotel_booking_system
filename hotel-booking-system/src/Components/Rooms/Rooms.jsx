@@ -34,7 +34,7 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button onClick={()=>Navigate('/home2')}>Book Now</button>
+                                    <button onClick={()=>Navigate('/carthome')}>Book Now</button>
                                     <i className="ri-arrow-right-line"></i>
                                 </div>
                             </div>

@@ -1,4 +1,5 @@
 import './App.css'
+import React from "react";
 import Header from './Components/Header/Header'
 import Nav from './Components/Nav/Nav'
 import Services from './Components/Services/Services'
@@ -19,6 +20,7 @@ import HeaderLoged from './Components/HeaderLoged/HeaderLoged'
 import NavLoged from './Components/NavLoged/NavLoged'
 import About from './Components/About/About'
 import Rooms from './Components/Rooms/Rooms'
+import CartHome from './Components/CartHome/CartHome'
 
 function App() {
 
@@ -41,6 +43,7 @@ function App() {
           <Route path="/forgetpassword" element={<ForgetPassword/>}> </Route>
         
           <Route path="/headerloged" element={<HeaderLoged/>}> </Route>
+          <Route path="/carthome" element={<CartHome/>}> </Route>
 
         </Routes>
       </BrowserRouter>
