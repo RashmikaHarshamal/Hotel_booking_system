@@ -21,6 +21,7 @@ import NavLoged from './Components/NavLoged/NavLoged'
 import About from './Components/About/About'
 import Rooms from './Components/Rooms/Rooms'
 import CartHome from './Components/CartHome/CartHome'
+import PayRooms from './Components/PayRooms/PayRooms';
 
 function App() {
 
@@ -44,10 +45,10 @@ function App() {
         
           <Route path="/headerloged" element={<HeaderLoged/>}> </Route>
           <Route path="/carthome" element={<CartHome/>}> </Route>
-
+          <Route path="/payrooms" element={<PayRooms/>}> </Route>
+          <Route path="/menu" element={<Menu/>}> </Route>
         </Routes>
       </BrowserRouter>
-      
     </div>
   )
 }

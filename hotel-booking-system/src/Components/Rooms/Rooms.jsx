@@ -34,8 +34,8 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button onClick={()=>Navigate('/carthome')}>Book Now</button>
-                                    <i className="ri-arrow-right-line"></i>
+                                    <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
+                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -58,8 +58,8 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button>Book Now</button>
-                                    <i className="ri-arrow-right-line"></i>
+                                    <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
+                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -82,8 +82,8 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button>Book Now</button>
-                                    <i className="ri-arrow-right-line"></i>
+                                    <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
+                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -106,8 +106,8 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button>Book Now</button>
-                                    <i className="ri-arrow-right-line"></i>
+                                    <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
+                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -130,8 +130,8 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button>Book Now</button>
-                                    <i className="ri-arrow-right-line"></i>
+                                    <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
+                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -154,8 +154,9 @@ function Rooms(){
                                     <p> - wifi & Parking</p>
                                 </div>
                                 <div className={roomsCSS.BookNow}>
-                                    <button>Book Now</button>
-                                    <i className="ri-arrow-right-line"></i>
+                                    <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
+                                    {/* <button onClick={()=>Navigate('/carthome')}><i className="ri-arrow-right-line"></i></button> */}
+                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>

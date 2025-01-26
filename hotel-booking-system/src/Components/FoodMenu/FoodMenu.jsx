@@ -31,7 +31,7 @@ function FoodMenu(){
                                     <p> <a href="#">- Hot & Sour Soup </a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Egg Drop Soup</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Chicken Soup </a><span>..........Rs.300</span></p>
-                                    <p> <a href="#">- More... </a></p>
+                                    <p> <Link to ="/menu">- More... </Link></p>
                                 </div>
                                 {/* <div className={roomsCSS.BookNow}>
                                     <button>Book Now</button>
@@ -58,7 +58,7 @@ function FoodMenu(){
                                     <p> <a href="#">- Sausage Fried Rice </a><span>..........Rs.1200</span></p>
                                     <p> <a href="#">- Pork Fried Rice </a><span>..........Rs.1300</span></p>
                                     <p> <a href="#">- Mixed Fried Rice </a><span>..........Rs.1500</span></p>
-                                    <p> <a href="#">- More... </a></p>
+                                    <p> <Link to ="/menu">- More... </Link></p>
                                 </div>
                                 {/* <div className={roomsCSS.BookNow}>
                                     <button>Book Now</button>
@@ -85,7 +85,7 @@ function FoodMenu(){
                                     <p> <a href="#">- Mixed Kottu</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Prawn Kottu</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Cheese Kottu</a><span>..........Rs.300</span></p>
-                                    <p> <a href="#">- More... </a></p>
+                                    <p> <Link to ="/menu">- More... </Link></p>
                                 </div>
                                 {/* <div className={roomsCSS.BookNow}>
                                     <button>Book Now</button>
@@ -112,7 +112,7 @@ function FoodMenu(){
                                     <p> <a href="#">- Dan Dan Noodles </a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Spicy Noodles </a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Pork Noodles </a><span>..........Rs.300</span></p>
-                                    <p> <a href="#">- More... </a></p>
+                                    <p> <Link to ="/menu">- More... </Link></p>
                                 </div>
                                 {/* <div className={roomsCSS.BookNow}>
                                     <button>Book Now</button>
@@ -139,7 +139,7 @@ function FoodMenu(){
                                     <p> <a href="#">- Bluberry</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Pineapple</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Mix </a><span>..........Rs.300</span></p>
-                                    <p> <a href="#">- More... </a></p>
+                                    <p> <Link to ="/menu">- More... </Link></p>
                                 </div>
                                 {/* <div className={roomsCSS.BookNow}>
                                     <button>Book Now</button>
@@ -166,7 +166,7 @@ function FoodMenu(){
                                     <p> <a href="#">- Bun</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- wade & Parata</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Curries </a><span>..........Rs.300</span></p>
-                                    <p> <a href="#">- More... </a></p>
+                                    <p> <Link to ="/menu">- More... </Link></p>
                                 </div>
                                 {/* <div className={roomsCSS.BookNow}>
                                     <button>Book Now</button>

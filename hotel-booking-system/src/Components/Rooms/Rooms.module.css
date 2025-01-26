@@ -33,9 +33,13 @@
     padding: 30px;
 }
 
-.Card_front{
-     background: url(./../../assets/1.jpg);
+.Card_front {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url(./../../assets/1.jpg);
+    background-size: cover;
+    background-position: center;
     justify-content: end;
+    z-index: 10;
 }
 
 .Card_front button{
@@ -43,8 +47,11 @@
 }
 
 .Card_Back{
-    background: url(./../../assets/1.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(./../../assets/1.jpg);
     transform: rotateY(180deg);
+    background-size: cover;
+    justify-content: end;
     z-index: 1;
 
 }
@@ -91,6 +98,7 @@
     height: 100%;
     width: 50px;
     background-color: #1e1e1e;
+    border-radius: 50%;
     color: #fff;
     display: flex;
     align-items: center;
@@ -98,43 +106,93 @@
 }
 
 .Card_front2 {
-    background: url(./../../assets/2.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url(./../../assets/2.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: end;
+    z-index: 10; 
 }
 
 .Card_Back2 {
-    background: url(./../../assets/2.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(./../../assets/2.jpg);
+    transform: rotateY(180deg);
+    background-size: cover;
+    justify-content: end;
+    z-index: 1; 
 }
 
 .Card_front3 {
-    background: url(./../../assets/3.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url(./../../assets/3.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: end;
+    z-index: 10; 
 }
 
 .Card_Back3 {
-    background: url(./../../assets/3.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(./../../assets/3.jpg);
+    transform: rotateY(180deg);
+    background-size: cover;
+    justify-content: end;
+    z-index: 1;
 }
 
 .Card_front4 {
-    background: url(./../../assets/4.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url(./../../assets/4.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: end;
+    z-index: 10;
 }
 
 .Card_Back4 {
-    background: url(./../../assets/4.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(./../../assets/4.jpg);
+    transform: rotateY(180deg);
+    background-size: cover;
+    justify-content: end;
+    z-index: 1; 
 }
 
 .Card_front5 {
-    background: url(./../../assets/5.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url(./../../assets/5.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: end;
+    z-index: 10; 
 }
 
 .Card_Back5 {
-    background: url(./../../assets/5.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(./../../assets/5.jpg);
+    transform: rotateY(180deg);
+    background-size: cover;
+    justify-content: end;
+    z-index: 1; 
 }
 
 .Card_front6 {
-    background: url(./../../assets/6.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url(./../../assets/6.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: end;
+    z-index: 10;
 }
 
 .Card_Back6 {
-    background: url(./../../assets/6.jpg);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(./../../assets/6.jpg);
+    transform: rotateY(180deg);
+    background-size: cover;
+    justify-content: end;
+    z-index: 1;
 }
 
 @media screen and (max-width:1100px){
