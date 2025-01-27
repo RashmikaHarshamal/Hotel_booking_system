@@ -9,6 +9,11 @@ const ViewCart = ({ cart }) => {
     setTotal(cart.reduce((acc, curr) => acc + parseInt(curr.amt), 0));
   }, [cart]);
 
+  const handlePayment = () => {
+    // Trigger payment process or navigate to payment page
+    alert("Redirecting to payment process...");
+  };
+
   return (
     <>
       <Header2 cart={cart} /> {/* Add Header2 here */}
@@ -27,6 +32,10 @@ const ViewCart = ({ cart }) => {
         ))}
       </div>
       <h2 className={styles.cartAmt}>Total Amount Rs: {total}</h2>
+      {/* Add the button below total amount */}
+      <button className={styles.payButton} onClick={handlePayment}>
+        Process to Pay
+      </button>
     </>
   );
 };

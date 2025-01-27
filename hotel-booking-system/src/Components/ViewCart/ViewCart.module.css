@@ -1,35 +1,128 @@
-.cart-container {
+/* Cart heading style */
+.cartHeading {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Main cart container */
+.cartContainer {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  gap: 15px;
+  padding: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.cart-product {
+/* Individual product card inside the cart */
+.cartProduct {
   display: flex;
-  gap: 5px;
+  gap: 15px;
   align-items: center;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cart-product .img {
-  width: 100px;
-  height: 100px;
+/* Hover effect on each product card */
+.cartProduct:hover {
+  transform: translateY(-5px); /* Lifts the product card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.cart-product .img img {
-  width: 100px;
+/* Image styling */
+.cartProduct .img {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+.cartProduct .img img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
-.cart-heading {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
+/* Cart product details (name and price) */
+.cartProductDetails {
+  flex-grow: 1;
 }
 
-.cart-amt {
-  font-size: 20px;
+.cartProductDetails h3 {
+  font-size: 18px;
   font-weight: 600;
-  margin-top: 10px;
+  color: #333;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.cartProductDetails p {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+/* Total amount section */
+.cartAmt {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  background-color: #ff6600;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+.payButton {
+  display: inline-block; /* Makes the button fit its content */
+  margin: 20px auto; /* Centers the button horizontally with vertical spacing */
+  padding: 15px 40px; /* Extra padding for a spacious and balanced design */
+  background-color: #ff6600; /* Vibrant orange */
+  color: #fff; /* White text for contrast */
+  font-size: 18px; /* Ensure text is readable */
+  font-weight: bold; /* Bold text for emphasis */
+  text-align: center; /* Centers the text inside the button */
+  border: none; /* Removes border */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth with shadow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap; /* Prevents text from wrapping */
+  min-width: 220px; /* Ensures button has enough space */
+}
+
+.payButton:hover {
+  background-color: #e65500; /* Slightly darker orange on hover */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+.payButton:active {
+  transform: scale(0.95); /* Slightly reduces size on click */
+}
+
+
+/* Responsive design: Stack items on small screens */
+@media (max-width: 768px) {
+  .cartProduct {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cartProduct .img {
+    margin-bottom: 10px;
+  }
 }

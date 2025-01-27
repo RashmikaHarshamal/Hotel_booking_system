@@ -1,7 +1,94 @@
-/* Home2.module.css */
-.product-container {
+/* Product container */
+.productContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
+  padding: 20px;
+}
+
+/* Individual product card styling */
+.product {
+  width: 250px; /* Adjust the width of the product card */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Hover effect for product card */
+.product:hover {
+  transform: translateY(-5px); /* Subtle lifting effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Product image styling */
+.product .img {
+  width: 100%;
+  height: 200px; /* Fixed height to maintain uniformity */
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.product .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits well inside */
+  border-bottom: 1px solid #eee;
+}
+
+/* Product details section */
+.product .details {
+  padding: 15px;
+}
+
+/* Product title styling */
+.product .details h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Price styling */
+.product .details p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.product .details button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.product .details button:hover {
+  background-color: #e55d00;
+  transform: translateY(-3px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .productContainer {
+    gap: 15px;
+  }
+
+  .product {
+    width: 100%; /* Make the product take full width on smaller screens */
+  }
 }
