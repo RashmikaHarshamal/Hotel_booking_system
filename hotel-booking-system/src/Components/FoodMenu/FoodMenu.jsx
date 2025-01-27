@@ -31,7 +31,7 @@ function FoodMenu(){
                                     <p> <a href="#">- Hot & Sour Soup </a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Egg Drop Soup</a><span>..........Rs.300</span></p>
                                     <p> <a href="#">- Chicken Soup </a><span>..........Rs.300</span></p>
-                                    <p> <Link to ="/menu">- More... </Link></p>
+                                    <p> <Link to ="/home3">- More... </Link></p>
                                 </div>
                                 {/* <div className={roomsCSS.BookNow}>
                                     <button>Book Now</button>

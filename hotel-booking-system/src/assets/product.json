@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Framers Pick 1", "amt": 45245, "pic": "image1.jpg" },
+    { "id": 2, "name": "Framers Pick 2", "amt": 34522, "pic": "image2.jpg" },
+    { "id": 3, "name": "Framers Pick 3", "amt": 542345, "pic": "image3.jpg" },
+    { "id": 4, "name": "Framers Pick 4", "amt": 452452, "pic": "image4.jpg" },
+    { "id": 5, "name": "Framers Pick 5", "amt": 452452, "pic": "image5.jpg" }
+  ]
+  

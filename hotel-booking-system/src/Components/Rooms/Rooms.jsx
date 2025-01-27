@@ -35,7 +35,7 @@ function Rooms(){
                                 </div>
                                 <div className={roomsCSS.BookNow}>
                                     <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
-                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
+                                    <i onClick={()=>Navigate('/home2')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@ function Rooms(){
                                 </div>
                                 <div className={roomsCSS.BookNow}>
                                     <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
-                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
+                                    <i onClick={()=>Navigate('/home2')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@ function Rooms(){
                                 </div>
                                 <div className={roomsCSS.BookNow}>
                                     <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
-                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
+                                    <i onClick={()=>Navigate('/home2')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ function Rooms(){
                                 </div>
                                 <div className={roomsCSS.BookNow}>
                                     <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
-                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
+                                    <i onClick={()=>Navigate('/home2')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +131,7 @@ function Rooms(){
                                 </div>
                                 <div className={roomsCSS.BookNow}>
                                     <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
-                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
+                                    <i onClick={()=>Navigate('/home2')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ function Rooms(){
                                 <div className={roomsCSS.BookNow}>
                                     <button onClick={()=>Navigate('/payrooms')}>Book Now</button>
                                     {/* <button onClick={()=>Navigate('/carthome')}><i className="ri-arrow-right-line"></i></button> */}
-                                    <i onClick={()=>Navigate('/carthome')} className="ri-arrow-right-line"></i>
+                                    <i onClick={()=>Navigate('/home2')} className="ri-arrow-right-line"></i>
                                 </div>
                             </div>
                         </div>
