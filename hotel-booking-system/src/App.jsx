@@ -31,7 +31,7 @@ const App = () => {
       {/* Header2 will be displayed on all pages */}
       {/* <Header2 cart={cart} /> */}
       <Routes>
-        Cart-related pages
+        {/* Cart-related pages */}
         <Route path="/home2" element={<Home2 cart={cart} setCart={setCart} />} />
         <Route path="/cart" element={<ViewCart cart={cart} />} />
 
