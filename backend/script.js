@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client';
 import express from "express";
 
 const prisma = new PrismaClient();
+
 const app = express();
 
 app.use(express.json()); // Middleware to parse JSON
@@ -53,24 +54,13 @@ app.delete("/comment/:id", async (req, res) => {
     }
 });
 
-
-
-// // Add a new comment
-// app.post("/comment", async (req, res) => {
-//     try {
-//         const { text } = req.body;
-//         if (!text) {
-//             return res.status(400).json({ error: "Text is required" });
-//         }
-//         const newComment = await prisma.comment.create({
-//             data: { text },
-//         });
-//         res.status(201).json(newComment);
-//     } catch (error) {
-//         console.error("Error creating comment:", error);
-//         res.status(500).json({ error: "Internal Server Error" });
-//     }
-// });
+app.post("/comment", async (req, res) => {
+    const commentStr = req.body.comment;
+    const comment = await prisma.comment.create({
+        data: { comment: commentStr },
+    });
+    res.json(comment);
+})
 
 // Start the server
 const PORT = 3000;
