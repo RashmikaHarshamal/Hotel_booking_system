@@ -62,6 +62,21 @@ app.post("/comment", async (req, res) => {
     res.json(comment);
 })
 
+app.put("/comment/:id", async (req, res) => {
+    const { id } = req.params;
+    const commentStr = req.body.comment;
+
+    try {
+        const comment = await prisma.comment.update({
+            data: { comment: commentStr },
+            where: { id: parseInt(id) },
+        });
+        res.json(comment);
+    } catch (e) {
+        res.status(404).json({ error: "Comment not found"});
+    }
+});
+
 // Start the server
 const PORT = 3000;
 app.listen(PORT, () => {
