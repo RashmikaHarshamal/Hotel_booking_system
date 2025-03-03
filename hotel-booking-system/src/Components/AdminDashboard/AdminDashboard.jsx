@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./AdminDashboard.module.css";
 
+import { Link, useNavigate } from 'react-router-dom';
+
 export default function AdminDashboard() {
   const [appointments, setAppointments] = useState([
     {
@@ -146,25 +148,32 @@ export default function AdminDashboard() {
                 </span>
               </td>
               <td>
-                {appointment.status === "Pending" ? (
-                  <>
-                    <button
-                      className={styles.adminCompleteBtn}
-                      onClick={() => updateStatus(appointment.id, "Completed")}
-                    >
-                      ✅ Complete
-                    </button>
-                    <button
-                      className={styles.adminCancelBtn}
-                      onClick={() => updateStatus(appointment.id, "Canceled")}
-                    >
-                      ❌ Cancel
-                    </button>
-                  </>
-                ) : (
-                  <span>{appointment.status}</span>
-                )}
-              </td>
+  {appointment.status === "Pending" ? (
+    <div className={styles.adminActions}>
+      <button
+        className={styles.adminCompleteBtn}
+        onClick={() => updateStatus(appointment.id, "Completed")}
+      >
+        Confirm✅
+      </button>
+      <button
+        className={styles.adminCancelBtn}
+        onClick={() => updateStatus(appointment.id, "Canceled")}
+      >
+        Cancel❌
+      </button>
+      <button
+        className={styles.adminEditBtn}
+        onClick={() => updateStatus(appointment.id, "edit")}
+      >
+        Edit✏️
+      </button>
+    </div>
+  ) : (
+    <span>{appointment.status}</span>
+  )}
+</td>
+
             </tr>
           ))}
         </tbody>

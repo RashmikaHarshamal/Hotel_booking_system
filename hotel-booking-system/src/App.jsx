@@ -57,6 +57,9 @@ const App = () => {
         <Route path="/payrooms" element={<PayRooms />} />
         <Route path="/menu" element={<Menu />} />
 
+        {/* Admin account-related pages */}
+        <Route path="/admindashboard" element={<AdminDashboard />} />
+
         {/* Default route for undefined paths */}
         <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Routes>

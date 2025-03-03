@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './AdLog.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 
-
 export default function AdLogin() {
+
+  const Navigate = useNavigate();
+
   return (
     <div className={styles.backgroundpart1}>
       <img src="/image3.jpg" alt="Background" className={styles.image} />
