@@ -45,11 +45,11 @@ export default function CreateAccount() {
           </div>
 
           <div className={styles.inputBox}>
-            <input type="email" placeholder="Email" required />
+            <input type="Password" placeholder="Password" required />
           </div>
 
           <div className={styles.inputBox}>
-            <input type="text" placeholder="Address" required />
+            <input type="Confirm Password" placeholder="Confirm Password" required />
           </div>
 
           <button type="submit" className={styles.btn}>
