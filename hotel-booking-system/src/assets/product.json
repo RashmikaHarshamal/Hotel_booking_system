@@ -1,8 +1,27 @@
 [
-    { "id": 1, "name": "Framers Pick 1", "amt": 45245, "pic": "image1.jpg" },
-    { "id": 2, "name": "Framers Pick 2", "amt": 34522, "pic": "image2.jpg" },
-    { "id": 3, "name": "Framers Pick 3", "amt": 542345, "pic": "image3.jpg" },
-    { "id": 4, "name": "Framers Pick 4", "amt": 452452, "pic": "image4.jpg" },
-    { "id": 5, "name": "Framers Pick 5", "amt": 452452, "pic": "image5.jpg" }
+    { "id": 1, "name": "Standard Room", "amt": 11500.00, "pic": "1.jpg" },
+    { "id": 2, "name": "Deluxe Room", "amt": 16000.00, "pic": "2.jpg" },
+    { "id": 3, "name": "Superior Room", "amt": 20000.00, "pic": "3.jpg" },
+    { "id": 4, "name": "Executive Room", "amt": 27500.00, "pic": "4.jpg" },
+    { "id": 5, "name": "Premium Room", "amt": 32500.00, "pic": "5.jpg" },
+    { "id": 6, "name": "Suite", "amt": 40000.00, "pic": "6.jpg" },
+    { "id": 7, "name": "Junior Suite", "amt": 45000.00, "pic": "7.jpg" },
+    { "id": 8, "name": "Presidential Suite", "amt": 175000.00, "pic": "8.jpg" },
+    { "id": 9, "name": "Penthouse Suite", "amt": 275000.00, "pic": "9.jpg" },
+    { "id": 10, "name": "Family Room", "amt": 26500.00, "pic": "10.jpg" },
+    { "id": 11, "name": "Connecting Room", "amt": 37500.00, "pic": "11.jpg" },
+    { "id": 12, "name": "Twin Room", "amt": 15000.00, "pic": "12.jpg" },
+    { "id": 13, "name": "Double Room", "amt": 16000.00, "pic": "13.jpg" },
+    { "id": 14, "name": "Single Room", "amt": 11000.00, "pic": "14.jpg" },
+    { "id": 15, "name": "King Room", "amt": 21500.00, "pic": "15.jpg" },
+    { "id": 16, "name": "Queen Room", "amt": 22500.00, "pic": "16.jpg" },
+    { "id": 17, "name": "Studio Room", "amt": 30000.00, "pic": "17.jpg" },
+    { "id": 18, "name": "Loft Room", "amt": 37500.00, "pic": "18.jpg" },
+    { "id": 19, "name": "Bungalow", "amt": 65000.00, "pic": "19.jpg" },
+    { "id": 20, "name": "Cabana Room", "amt": 40000.00, "pic": "20.jpg" },
+    { "id": 20, "name": "Honeymoon Suite", "amt": 100000.00, "pic": "21.jpg" },
+    { "id": 20, "name": "Villa", "amt": 120000.00, "pic": "22.jpg" },
+    { "id": 20, "name": "Waterfront Room", "amt": 55000.00, "pic": "23.jpg" },
+    { "id": 20, "name": "Skyline Room", "amt": 47500.00, "pic": "24.jpg" }
   ]
   
