@@ -15,10 +15,11 @@ export default function AdLogin() {
     try {
       const response = await axios.post('http://localhost:8081/adminlogin', {
         id_number: idNumber,
-        password: password
+        password: password,
       });
 
       if (response.data.message === 'Login successful') {
+        // Redirect to admin dashboard after successful login
         navigate('/admindashboard');
       }
     } catch (error) {
@@ -70,12 +71,6 @@ export default function AdLogin() {
           <button type="submit" className={styles.btn}>
             Login
           </button>
-
-          {/* <div className={styles.registerLink}>
-            <p>
-              Don't have an account? <Link to="/CreateAccount">Create Account</Link>
-            </p>
-          </div> */}
 
           <div className={styles.adminDoctor}>
             <p>

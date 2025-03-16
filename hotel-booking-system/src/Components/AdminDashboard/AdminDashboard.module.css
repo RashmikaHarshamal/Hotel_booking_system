@@ -1,147 +1,252 @@
-/* AdminDashboard.module.css */
 .adminDashboardContainer {
-    padding: 40px;
-    background-color: #1e1e2f;
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-  }
-  
-  /* h1 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #ff9900;
-    font-weight: 700;
-  }
-   */
-  .adminAppointmentsTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    background-color: #2a2a3c;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .adminAppointmentsTable th,
-  .adminAppointmentsTable td {
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-  }
-  
-  .adminAppointmentsTable th {
-    background-color: #ff9900;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .adminAppointmentsTable tr:nth-child(even) {
-    background-color: #333344;
-  }
-  
-  .adminAppointmentsTable tr:hover {
-    background-color: #444555;
-    transform: scale(1.02);
-    transition: 0.3s ease;
-  }
-  
-  .adminCompleteBtn,
-  .adminCancelBtn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .adminCompleteBtn {
-    background-color: #28a745;
-    color: white;
-    border-radius: 20px;
-  }
-  
-  .adminCompleteBtn:hover {
-    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
-    transform: scale(1.05);
-  }
-  
-  .adminCancelBtn {
-    background-color: #dc3545;
-    color: white;
-    border-radius: 20px;
-  }
-  
-  .adminCancelBtn:hover {
-    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
-    transform: scale(1.05);
-  }
-  
-  .statusBadge {
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 12px;
-    text-transform: uppercase;
-  }
-  
-  .statusPending {
-    background-color: #ffc107;
-    color: white;
-  }
-  
-  .statusCompleted {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  .statusCanceled {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  @media (max-width: 768px) {
-    .adminDashboardContainer {
-      padding: 20px;
-    }
-  
-    .adminAppointmentsTable th,
-    .adminAppointmentsTable td {
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    /* .adminCompleteBtn,
-    .adminCancelBtn,
-    .adminEditBtn
-    {
-      font-size: 14px;
-      padding: 8px 16px;
-    } */
+  padding: 40px;
+  background-color: #1e1e2f;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  text-align: center;
+}
 
-    .adminActions {
-      display: flex;
-      gap: 5px; /* Small spacing between buttons */
-      align-items: center;
-    }
-    
-    .adminCompleteBtn,
-    .adminCancelBtn,
-    .adminEditBtn {
-      font-size: 12px; /* Smaller text */
-      padding: 4px 8px; /* Smaller padding */
-      border-radius: 5px;
-      min-width: auto 5px;
-      min-height: auto 5px;
-      display: inline-block; /* Ensures they stay in one line */
-    }
-    
+/* Room Count Summary */
+.dashboardSummary {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summaryCard {
+  background-color: #2a2a3c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+}
+
+.summaryCard h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.summaryCard p {
+  font-size: 1rem;
+  color: #ff9900;
+}
+
+/* Search Bar */
+.searchWrapper {
+  margin-bottom: 20px;
+}
+
+.searchBar {
+  padding: 10px;
+  width: 300px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Rooms Table */
+.adminRoomsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #2a2a3c;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.adminRoomsTable th,
+.adminRoomsTable td {
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.adminRoomsTable th {
+  background-color: #ff9900;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.adminRoomsTable tr:nth-child(even) {
+  background-color: #333344;
+}
+
+.adminRoomsTable tr:hover {
+  background-color: #444555;
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+/* Buttons */
+.bookButton {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.bookButton:hover {
+  background-color: #218838;
+}
+
+.unbookButton {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.unbookButton:hover {
+  background-color: #c82333;
+}
+
+.updateButton {
+  background-color: #ffc107;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.updateButton:hover {
+  background-color: #e0a800;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+/* Update Form Overlay */
+.updateFormOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.updateForm {
+  background-color: #2a2a3c;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 450px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
   }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+.updateForm h2 {
+  font-size: 1.8rem;
+  color: #ff9900;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  
+.updateForm .formGroup {
+  margin-bottom: 15px;
+}
+
+.updateForm .formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.updateForm .formGroup input,
+.updateForm .formGroup select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  font-size: 1rem;
+  background-color: #333344;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.updateForm .formGroup input:focus,
+.updateForm .formGroup select:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 8px rgba(255, 153, 0, 0.5);
+  outline: none;
+}
+
+.updateForm .buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.updateForm .submitButton {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.updateForm .submitButton:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.updateForm .cancelButton {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.updateForm .cancelButton:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}

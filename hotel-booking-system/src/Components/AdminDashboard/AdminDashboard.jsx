@@ -1,183 +1,282 @@
-import React, { useState } from "react";
-import styles from "./AdminDashboard.module.css";
-
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styles from './AdminDashboard.module.css';
 
 export default function AdminDashboard() {
-  const [appointments, setAppointments] = useState([
-    {
-      id: 1,
-      patientName: "John Doe",
-      age: 30,
-      doctorName: "Dr. Samuel Carter",
-      doctorSpeciality: "Dermatologist",
-      date: "Friday",
-      time: "5:00 PM",
-      status: "Pending",
-    },
-    {
-      id: 2,
-      patientName: "Jane Smith",
-      age: 25,
-      doctorName: "Dr. Alexander Scott",
-      doctorSpeciality: "Pediatrician",
-      date: "Friday",
-      time: "2:00 PM",
-      status: "Completed",
-    },
-    {
-      id: 3,
-      patientName: "Alice Johnson",
-      age: 28,
-      doctorName: "Dr. Laura White",
-      doctorSpeciality: "Cardiologist",
-      date: "Monday",
-      time: "9:00 AM",
-      status: "Pending",
-    },
-    {
-      id: 4,
-      patientName: "Bob Brown",
-      age: 35,
-      doctorName: "Dr. Emily Davis",
-      doctorSpeciality: "Neurologist",
-      date: "Wednesday",
-      time: "10:30 AM",
-      status: "Completed",
-    },
-    {
-      id: 5,
-      patientName: "Charlie Green",
-      age: 42,
-      doctorName: "Dr. Robert Green",
-      doctorSpeciality: "Orthopedist",
-      date: "Tuesday",
-      time: "3:00 PM",
-      status: "Canceled",
-    },
-    {
-      id: 6,
-      patientName: "David Lee",
-      age: 55,
-      doctorName: "Dr. Steven Harris",
-      doctorSpeciality: "Gastroenterologist",
-      date: "Thursday",
-      time: "1:00 PM",
-      status: "Pending",
-    },
-    // Add more unique patient records with different `id`
-  ]);
+  const [rooms, setRooms] = useState([]);
+  const [search, setSearch] = useState('');
+  const [editingRoom, setEditingRoom] = useState(null); // Track the room being edited
+  const [updatedRoom, setUpdatedRoom] = useState({
+    name: '',
+    picture: '',
+    amount: 0,
+    availability: 'Available',
+    discount: 0,
+    duration: '',
+    foods: '',
+    gym_and_pool: '',
+  });
 
-  const [search, setSearch] = useState("");
+  // Fetch all rooms from the backend
+  useEffect(() => {
+    axios.get('http://localhost:8081/rooms')
+      .then((response) => {
+        setRooms(response.data);
+      })
+      .catch((error) => console.error('Error fetching rooms:', error));
+  }, []);
 
-  const updateStatus = (id, newStatus) => {
-    setAppointments((prevAppointments) =>
-      prevAppointments.map((appointment) =>
-        appointment.id === id ? { ...appointment, status: newStatus } : appointment
-      )
-    );
+  // Filter rooms based on search input
+  const filteredRooms = rooms.filter((room) =>
+    room.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  // Count total, booked, and available rooms
+  const totalRoomsCount = rooms.length;
+  const bookedRoomsCount = rooms.filter((room) => room.availability === 'Booked').length;
+  const availableRoomsCount = rooms.filter((room) => room.availability === 'Available').length;
+
+  // Handle room deletion
+  const handleDeleteRoom = (id) => {
+    axios.delete(`http://localhost:8081/rooms/${id}`)
+      .then(() => {
+        setRooms((prevRooms) => prevRooms.filter((room) => room.id !== id));
+      })
+      .catch((error) => console.error('Error deleting room:', error));
   };
 
-  const filteredAppointments = appointments.filter((appointment) =>
-    appointment.patientName.toLowerCase().includes(search.toLowerCase())
-  );
+  // Handle room status toggle (Book/Unbook)
+  const handleToggleBooking = (id, currentAvailability) => {
+    const newAvailability = currentAvailability === 'Available' ? 'Booked' : 'Available';
+    axios.put(`http://localhost:8081/rooms/${id}`, { availability: newAvailability })
+      .then(() => {
+        setRooms((prevRooms) =>
+          prevRooms.map((room) =>
+            room.id === id ? { ...room, availability: newAvailability } : room
+          )
+        );
+      })
+      .catch((error) => console.error('Error updating room status:', error));
+  };
+
+  // Handle opening the update form
+  const handleOpenUpdateForm = (room) => {
+    setEditingRoom(room.id);
+    setUpdatedRoom(room);
+  };
+
+  // Handle input changes in the update form
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUpdatedRoom((prevRoom) => ({
+      ...prevRoom,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission to update room details
+  const handleUpdateRoom = (e) => {
+    e.preventDefault();
+    axios.put(`http://localhost:8081/rooms/${editingRoom}`, updatedRoom)
+      .then(() => {
+        setRooms((prevRooms) =>
+          prevRooms.map((room) =>
+            room.id === editingRoom ? updatedRoom : room
+          )
+        );
+        setEditingRoom(null); // Close the form
+      })
+      .catch((error) => console.error('Error updating room:', error));
+  };
 
   return (
     <div className={styles.adminDashboardContainer}>
-      <h1>Appointments Dashboard</h1>
+      <h1>Rooms Dashboard</h1>
 
-      {/* Dashboard Summary */}
-      <div className={styles.dashboardCards}>
-        <div className={styles.card}>
-          <h2>{appointments.length}</h2>
-          <p>Total Appointments</p>
+      {/* Room Count Summary */}
+      <div className={styles.dashboardSummary}>
+        <div className={styles.summaryCard}>
+          <h2>{totalRoomsCount}</h2>
+          <p>Total Rooms</p>
         </div>
-        <div className={styles.card}>
-          <h2>{appointments.filter((a) => a.status === "Completed").length}</h2>
-          <p>Completed</p>
+        <div className={styles.summaryCard}>
+          <h2>{bookedRoomsCount}</h2>
+          <p>Booked Rooms</p>
         </div>
-        <div className={styles.card}>
-          <h2>{appointments.filter((a) => a.status === "Pending").length}</h2>
-          <p>Pending</p>
-        </div>
-        <div className={styles.card}>
-          <h2>{appointments.filter((a) => a.status === "Canceled").length}</h2>
-          <p>Canceled</p>
+        <div className={styles.summaryCard}>
+          <h2>{availableRoomsCount}</h2>
+          <p>Available Rooms</p>
         </div>
       </div>
 
       {/* Search Bar */}
-      <input
-        type="text"
-        placeholder="Search by patient name..."
-        className={styles.searchBar}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <div className={styles.searchWrapper}>
+        <input
+          type="text"
+          placeholder="Search by Room Name..."
+          className={styles.searchBar}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
 
-      {/* Appointments Table */}
-      <table className={styles.adminAppointmentsTable}>
+      {/* Rooms Table */}
+      <table className={styles.adminRoomsTable}>
         <thead>
           <tr>
-            <th>Patient Name</th>
-            <th>Age</th>
-            <th>Doctor Name</th>
-            <th>Doctor Speciality</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Status</th>
+            <th>Room Name</th>
+            <th>Picture</th>
+            <th>Amount</th>
+            <th>Availability</th>
+            <th>Discount</th>
+            <th>Duration</th>
+            <th>Foods</th>
+            <th>Gym and Pool</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {filteredAppointments.map((appointment) => (
-            <tr key={appointment.id}>
-              <td>{appointment.patientName}</td>
-              <td>{appointment.age}</td>
-              <td>{appointment.doctorName}</td>
-              <td>{appointment.doctorSpeciality}</td>
-              <td>{appointment.date}</td>
-              <td>{appointment.time}</td>
+          {filteredRooms.map((room) => (
+            <tr key={room.id}>
+              <td>{room.name}</td>
+              <td><img src={room.picture} alt={room.name} width="50" /></td>
+              <td>${room.amount}</td>
+              <td>{room.availability}</td>
+              <td>{room.discount}%</td>
+              <td>{room.duration}</td>
+              <td>{room.foods}</td>
+              <td>{room.gym_and_pool}</td>
               <td>
-                <span
-                  className={`${styles.statusBadge} ${
-                    styles[appointment.status.toLowerCase()]
-                  }`}
+                <button
+                  className={room.availability === 'Available' ? styles.bookButton : styles.unbookButton}
+                  onClick={() => handleToggleBooking(room.id, room.availability)}
                 >
-                  {appointment.status}
-                </span>
+                  {room.availability === 'Available' ? 'Book' : 'Unbook'}
+                </button>
+                <button
+                  className={styles.updateButton}
+                  onClick={() => handleOpenUpdateForm(room)}
+                >
+                  Update
+                </button>
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => handleDeleteRoom(room.id)}
+                >
+                  Delete
+                </button>
               </td>
-              <td>
-  {appointment.status === "Pending" ? (
-    <div className={styles.adminActions}>
-      <button
-        className={styles.adminCompleteBtn}
-        onClick={() => updateStatus(appointment.id, "Completed")}
-      >
-        Confirm✅
-      </button>
-      <button
-        className={styles.adminCancelBtn}
-        onClick={() => updateStatus(appointment.id, "Canceled")}
-      >
-        Cancel❌
-      </button>
-      <button
-        className={styles.adminEditBtn}
-        onClick={() => updateStatus(appointment.id, "edit")}
-      >
-        Edit✏️
-      </button>
-    </div>
-  ) : (
-    <span>{appointment.status}</span>
-  )}
-</td>
-
             </tr>
           ))}
         </tbody>
       </table>
+
+      {/* Update Room Form */}
+      {editingRoom && (
+        <div className={styles.updateFormOverlay}>
+          <div className={styles.updateForm}>
+            <h2>Update Room Details</h2>
+            <form onSubmit={handleUpdateRoom}>
+              <div className={styles.formGroup}>
+                <label>Room Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={updatedRoom.name}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label>Picture URL</label>
+                <input
+                  type="text"
+                  name="picture"
+                  value={updatedRoom.picture}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label>Amount</label>
+                <input
+                  type="number"
+                  name="amount"
+                  value={updatedRoom.amount}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label>Availability</label>
+                <select
+                  name="availability"
+                  value={updatedRoom.availability}
+                  onChange={handleInputChange}
+                  required
+                >
+                  <option value="Available">Available</option>
+                  <option value="Booked">Booked</option>
+                  <option value="Canceled">Canceled</option>
+                </select>
+              </div>
+              <div className={styles.formGroup}>
+                <label>Discount (%)</label>
+                <input
+                  type="number"
+                  name="discount"
+                  value={updatedRoom.discount}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label>Duration</label>
+                <input
+                  type="text"
+                  name="duration"
+                  value={updatedRoom.duration}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label>Foods</label>
+                <input
+                  type="text"
+                  name="foods"
+                  value={updatedRoom.foods}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label>Gym and Pool</label>
+                <input
+                  type="text"
+                  name="gym_and_pool"
+                  value={updatedRoom.gym_and_pool}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              {/* Button Container */}
+              <div className={styles.buttonContainer}>
+                <button type="submit" className={styles.submitButton}>
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  className={styles.cancelButton}
+                  onClick={() => setEditingRoom(null)}
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
