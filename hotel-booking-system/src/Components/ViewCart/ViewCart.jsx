@@ -16,7 +16,7 @@ const ViewCart = ({ cart }) => {
 
   return (
     <>
-      <Header2 cart={cart} /> {/* Add Header2 here */}
+      {/* <Header2 cart={cart} /> Add Header2 here */}
       <h1 className={styles.cartHeading}>Cart Products</h1>
       <div className={styles.cartContainer}>
         {cart.map((product) => (

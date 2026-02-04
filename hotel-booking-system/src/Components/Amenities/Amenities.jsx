@@ -39,7 +39,7 @@ function Amenities() {
 
                         <div className={amenitiesCSS.content}>
                             <h2>Swimming Pool</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                            <p>Enjoy a refreshing escape in our luxury swimming pool, designed for relaxation and comfort. Whether you want a peaceful morning swim or a calm evening by the water, our pool area offers the perfect atmosphere for a memorable stay.</p>
                             <button>Book Now !</button>    
                         </div>   
                     </div>
@@ -50,7 +50,7 @@ function Amenities() {
 
                         <div className={amenitiesCSS.content}>
                             <h2>GYM and Sports</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                            <p>Stay active and energized during your visit with our fully equipped gym and sports facilities. From modern fitness equipment to dedicated workout spaces, RoyalX ensures you can maintain your healthy lifestyle while enjoying your vacation.</p>
                             <button>Book Now !</button>    
                         </div>   
                     </div>
@@ -61,7 +61,7 @@ function Amenities() {
 
                         <div className={amenitiesCSS.content}>
                             <h2>Restro & cafe</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                            <p>Experience delicious dining at our restaurant and café, offering a variety of cuisines and fresh beverages. Whether it’s a family dinner or a quick coffee break, our cozy space provides the perfect blend of taste and comfort.</p>
                             <button>Book Now !</button>    
                         </div>   
                     </div>

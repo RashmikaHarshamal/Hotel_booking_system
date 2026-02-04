@@ -1,10 +1,20 @@
+/* Main Container */
 .adminDashboardContainer {
   padding: 40px;
-  background-color: #1e1e2f;
+  background-color: #1a1a27;
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
   color: #fff;
   text-align: center;
+}
+
+.adminDashboardContainer h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.adminDashboardContainer h1 span {
+  color: #ff9900;
 }
 
 /* Room Count Summary */
@@ -16,7 +26,7 @@
 }
 
 .summaryCard {
-  background-color: #2a2a3c;
+  background-color: #111220;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,7 +62,7 @@
   width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
-  background-color: #2a2a3c;
+  background-color: #1a1a27;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -73,18 +83,18 @@
 }
 
 .adminRoomsTable tr:nth-child(even) {
-  background-color: #333344;
+  background-color: #222231;
 }
 
 .adminRoomsTable tr:hover {
-  background-color: #444555;
+  background-color: #262649;
   transform: scale(1.02);
   transition: 0.3s ease;
 }
 
 /* Buttons */
 .bookButton {
-  background-color: #28a745;
+  background-color: #e38800;
   color: white;
   padding: 8px 12px;
   border: none;
@@ -95,11 +105,11 @@
 }
 
 .bookButton:hover {
-  background-color: #218838;
+  background-color: #fca521;
 }
 
 .unbookButton {
-  background-color: #dc3545;
+  background-color: #022415;
   color: white;
   padding: 8px 12px;
   border: none;
@@ -110,11 +120,11 @@
 }
 
 .unbookButton:hover {
-  background-color: #c82333;
+  background-color: #025833;
 }
 
 .updateButton {
-  background-color: #ffc107;
+  background-color: #2a012a;
   color: white;
   padding: 8px 12px;
   border: none;
@@ -125,11 +135,11 @@
 }
 
 .updateButton:hover {
-  background-color: #e0a800;
+  background-color: #4a024a;
 }
 
 .deleteButton {
-  background-color: #dc3545;
+  background-color: #3c0107;
   color: white;
   padding: 8px 12px;
   border: none;
@@ -139,7 +149,82 @@
 }
 
 .deleteButton:hover {
-  background-color: #c82333;
+  background-color: #85000d;
+}
+
+/* Top Buttons Container */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Add New Room Button */
+.addButton {
+  background-color: #ff9900;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px; /* Increased width */
+}
+
+.addButton:hover {
+  background-color: #ffb23f;
+  transform: translateY(-2px);
+}
+
+/* Booked Button */
+.bookedButton {
+  background-color: #012e1b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px; /* Increased width */
+}
+
+.bookedButton:hover {
+  background-color: #025833;
+  transform: translateY(-2px);
+}
+
+.oppointmentButton {
+  background-color: #003d23;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px; /* Increased width */
+}
+
+.oppointmentButton:hover {
+  background-color: #025833;
+  transform: translateY(-2px);
+}
+
+/* Request Button */
+.requestButton {
+  background-color: #2a012a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px; /* Increased width */
+}
+
+.requestButton:hover {
+  background-color: #430443;
+  transform: translateY(-2px);
 }
 
 /* Update Form Overlay */
@@ -153,7 +238,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Ensure it's above everything */
 }
 
 .updateForm {
@@ -161,7 +246,9 @@
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  width: 450px;
+  width: 600px; /* Increased width */
+  max-height: 90vh; /* Limit height to 90% of viewport height */
+  overflow-y: auto; /* Add scrollbar if content overflows */
   animation: slideIn 0.3s ease-out;
 }
 
@@ -222,22 +309,23 @@
 }
 
 .updateForm .submitButton {
-  background-color: #28a745;
+  background-color: #4c024c;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: fit-content;
 }
 
 .updateForm .submitButton:hover {
-  background-color: #218838;
+  background-color: #800080;
   transform: translateY(-2px);
 }
 
 .updateForm .cancelButton {
-  background-color: #dc3545;
+  background-color: #65000a;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -247,6 +335,6 @@
 }
 
 .updateForm .cancelButton:hover {
-  background-color: #c82333;
+  background-color: #65000a;
   transform: translateY(-2px);
 }

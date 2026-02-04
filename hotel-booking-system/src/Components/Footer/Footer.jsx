@@ -7,7 +7,7 @@ function Footer(){
             <div className={footerCSS.FooterLinks}>
                 <div className={footerCSS.logo}>
                     <h2>RoyalX</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                    <p>RoyalX is a premium hospitality destination offering elegant rooms, world-class services, and unforgettable experiences for travelers worldwide.</p>
 
                 </div>
             </div>
@@ -23,17 +23,17 @@ function Footer(){
 
             <div className={footerCSS.FooterLinks}>
                 <h3>City Branches</h3>
-                <p>Maxico</p>
-                <p>Bharat</p>
-                <p>Germany</p>
-                <p>Australia</p>
-                <p>California</p>
+                <p>Colombo</p>
+                <p>Galle</p>
+                <p>Kandy</p>
+                <p>Gampaha</p>
+                <p>Ampara</p>
             </div>
 
             <div className={footerCSS.FooterLinks}>
                 <h3>Contact</h3>
-                <p>Address: <span>360 Street- Mumbai, India</span></p>
-                <p>Email : <span>ex@gmail.com</span></p>
+                <p>Address: <span>28/112, Kumudugama, Ampara</span></p>
+                <p>Email : <span>rashmikaharshamal169@gmail.com</span></p>
                 <p>Phone : <span>0714191696</span></p>
             </div>
         </footer>

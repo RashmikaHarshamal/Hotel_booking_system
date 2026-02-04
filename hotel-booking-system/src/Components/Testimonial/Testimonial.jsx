@@ -50,7 +50,7 @@ function Testimonial(){
                             <img src={img1} alt=""/>
                             <div className={testimonialCSS.content}>
                                 <h3>Amrita <span>manager</span></h3>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                                <p>RoyalX truly exceeded my expectations. The rooms were elegant, the staff was extremely friendly, and the overall atmosphere was peaceful. I would highly recommend this hotel for anyone looking for comfort and luxury.</p>
 
                             </div>
                         </div>
@@ -61,7 +61,7 @@ function Testimonial(){
                             <img src={img2} alt=""/>
                             <div className={testimonialCSS.content}>
                                 <h3>Samantha <span>Sales manager</span></h3>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                                <p>My stay at RoyalX was amazing from start to finish. The amenities were top-class, the restaurant served delicious meals, and everything was well organized. It felt like a perfect getaway experience.</p>
 
                             </div>
                         </div>
@@ -72,7 +72,7 @@ function Testimonial(){
                             <img src={img3} alt=""/>
                             <div className={testimonialCSS.content}>
                                 <h3>John Doe <span>manager</span></h3>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At est enim tempora id magnam ullam placeat fugiat velit accusantium inventore expedita consequuntur, Culpa ratione ad.</p>
+                                <p>RoyalX offers outstanding service and a truly relaxing environment. The hospitality was excellent, and every detail was handled professionally. I enjoyed every moment and will definitely visit again.</p>
 
                             </div>
                         </div>
